@@ -11,16 +11,16 @@
     <meta property="og:description" content="">
     <meta property="og:image" content="static/img/angico-7.jpg">
 
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+
     {% if config.DEBUG %}
       <link rel="stylesheet" href="static/bower_components/foundation-sites/dist/foundation.css">
       <link rel="stylesheet" href="static/bower_components/font-awesome/css/font-awesome.css">
+      <link rel="stylesheet" href="static/css/app.css">
     {% else %}
-      <link rel="stylesheet" href="static/bower_components/foundation-sites/dist/foundation.min.css">
-      <link rel="stylesheet" href="static/bower_components/font-awesome/css/font-awesome.min.css">
+      <link rel="stylesheet" href="static/css/app.min.css">
     {% endif %}
 
-    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
-    <link rel="stylesheet" href="static/css/app.css">
   </head>
   <body>
     <div id="fb-root"></div>
@@ -177,12 +177,9 @@
       <script src="static/bower_components/what-input/what-input.js" charset="utf-8"></script>
       <script src="static/bower_components/foundation-sites/dist/foundation.js" charset="utf-8"></script>
       <script src="static/bower_components/jquery.scrollTo/jquery.scrollTo.js" charset="utf-8"></script>
+      <script src="static/js/app.js" charset="utf-8"></script>
     {% else %}
-      <script src="static/bower_components/jquery/dist/jquery.min.js" charset="utf-8"></script>
-      <script src="static/bower_components/what-input/what-input.min.js" charset="utf-8"></script>
-      <script src="static/bower_components/foundation-sites/dist/foundation.min.js" charset="utf-8"></script>
-      <script src="static/bower_components/jquery.scrollTo/jquery.scrollTo.min.js" charset="utf-8"></script>
+      <script src="static/js/app.min.js" charset="utf-8"></script>
     {% endif %}
-    <script src="static/js/app.js" charset="utf-8"></script>
   </body>
 </html>

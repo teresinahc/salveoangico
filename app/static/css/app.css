@@ -120,13 +120,21 @@ footer {
 }
 
 .form-errors-wrapper {
-  color: red;
+  color: white;
   margin-bottom: 20px;
 }
 
+.form-errors-wrapper .petition-form-error {
+  background-color: #ce4444;
+  margin: 5px 0;
+  padding: 10px;
+}
+
 .petition-message {
-  color: green;
-  margin: 10px 0;
+  color: white;
+  background-color: #44ce44;
+  padding: 10px;
+  margin: 10px 0
 }
 
 .tada-wrapper {

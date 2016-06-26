@@ -27,4 +27,9 @@ gulp.task('minify-css', function () {
   .pipe(gulp.dest('./css/'));
 });
 
-gulp.task('default', ['uglify-js', 'minify-css']);
+gulp.task('copy-fonts', function () {
+  return gulp.src('bower_components/font-awesome/fonts/*')
+  .pipe(gulp.dest('./fonts/'));
+});
+
+gulp.task('default', ['uglify-js', 'minify-css', 'copy-fonts']);

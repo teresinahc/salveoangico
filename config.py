@@ -2,7 +2,7 @@ import os
 from decouple import config
 
 # Statement for enabling the development environment
-DEBUG = config('DEBUG')
+DEBUG = config('DEBUG', cast=bool)
 
 # Define the application directory
 BASE_DIR = os.path.abspath(os.path.dirname(__file__))

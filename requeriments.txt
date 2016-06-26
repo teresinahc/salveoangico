@@ -3,3 +3,4 @@ Flask-WTF==0.12
 Flask-SQLAlchemy==2.1
 python-decouple==3.0
 pycpfcnpj==1.0.2
+MySQL-python==1.2.5

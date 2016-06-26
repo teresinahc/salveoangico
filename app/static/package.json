@@ -9,5 +9,10 @@
   "license": "MIT",
   "dependencies": {
     "bower": "^1.7.9"
+  },
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-clean-css": "^2.0.10",
+    "gulp-concat": "^2.6.0"
   }
 }

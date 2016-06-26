@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Salve o Angico</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta property="og:url" content="www.salveoangico.com">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Salve o Angico">
+    <meta property="og:description" content="">
+    <meta property="og:image" content="static/img/angico-7.jpg">
+
+    <link rel="stylesheet" href="static/bower_components/foundation-sites/dist/foundation.css">
+    <link rel="stylesheet" href="static/bower_components/font-awesome/css/font-awesome.css">
+    <link href='https://fonts.googleapis.com/css?family=Roboto:400,700,500' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/app.css">
+  </head>
+  <body>
+    <div id="fb-root"></div>
+    <script>(function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0];
+      if (d.getElementById(id)) return;
+      js = d.createElement(s); js.id = id;
+      js.src = "//connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v2.6&appId=1385915561673868";
+      fjs.parentNode.insertBefore(js, fjs);
+    }(document, 'script', 'facebook-jssdk'));</script>
+
+    <script>window.twttr = (function(d, s, id) {
+      var js, fjs = d.getElementsByTagName(s)[0],
+        t = window.twttr || {};
+      if (d.getElementById(id)) return t;
+      js = d.createElement(s);
+      js.id = id;
+      js.src = "https://platform.twitter.com/widgets.js";
+      fjs.parentNode.insertBefore(js, fjs);
+
+      t._e = [];
+      t.ready = function(f) {
+        t._e.push(f);
+      };
+
+      return t;
+    }(document, "script", "twitter-wjs"));</script>
+
+    <header>
+      <div class="row">
+        <div class="small-12 medium-12 large-10 large-push-1 column text-center medium-text-left">
+          <nav class="top-bar" role="navigation">
+            <a class="brand" href="/">SALVE O ANGICO</a>
+          </nav>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      <section id="save-angico">
+        <div class="mask">
+          <div class="row">
+            <div class="small-12 medium-12 large-10 large-push-1 column">
+              <div class="small-12 medium-6 large-6 column">
+                <h1>SALVE O ANGICO</h1>
+
+                <ul class="social-buttons">
+                  <li>
+                    <div
+                      class="fb-share-button"
+                      data-href="https://www.facebook.com/Salveoangico"
+                      data-layout="button_count"
+                      data-mobile-iframe="true">
+                        <a
+                          class="fb-xfbml-parse-ignore"
+                          target="_blank"
+                          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FSalveoangico&amp;src=sdkpreparse">
+                            Compartilhar
+                        </a>
+                    </div>
+                  </li>
+                  <li style="padding-top: 6px;">
+                    <a
+                      class="twitter-share-button"
+                      href="https://twitter.com/intent/tweet?text=Salve%20o%20angico!">
+                        Tweet
+                    </a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="small-12 medium-6 large-6 column message">
+                Lorem ipsum dolor sit amet, consectetur adipisicing elit,
+                sed do eiusmod tempor incididunt ut labore et dolore magna
+                aliqua. Ut enim ad minim veniam, quis nostrud exercitation
+                ullamco laboris nisi ut aliquip ex ea commodo consequat.
+                Duis aute irure dolor in reprehenderit in voluptate velit
+                esse cillum dolore eu fugiat nulla pariatur. Excepteur
+                sint occaecat cupidatat non proident, sunt in culpa qui
+                officia deserunt mollit anim id est laborum.
+              </div>
+
+              <div class="small-12 column text-center">
+                <br><br>
+                <a href="#sign-form" id="scroll-to-form" class="button">APOIAR CAUSA</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="people">
+        <div class="row">
+          <div class="small-12 medium-12 large-10 large-push-1 column text-center">
+            <div class="number">
+              {{ signatures_count }}
+            </div>
+            <div class="message">
+              apoiam essa causa
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="padded" id="sign-form">
+        {% block body %}
+
+        {% endblock %}
+      </section>
+
+      <section class="padded" id="signed">
+        <div class="row">
+          <h2 class="title">PESSOAS QUE APOIAM ESTA IDÉIA</h2>
+
+          <div class="small-12 medium-12 large-10 large-push-1 column">
+            {% for signature in signatures %}
+              <div class="small-12 medium-4 large-4 column">
+                <div class="person">
+                  {{ signature.name }}
+                </div>
+              </div>
+            {% endfor %}
+          </div>
+
+          <div class="column"></div>
+        </div>
+      </section>
+
+    </main>
+
+    <footer>
+      <div class="row">
+        <div class="small-12 column text-center medium-text-right">
+          <i class="fa fa-code"></i>
+          with
+          <i class="fa fa-heart"></i>
+          by <b>TeresinaHC</b>
+        </div>
+      </div>
+    </footer>
+
+    <script src="static/bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+    <script src="static/bower_components/what-input/what-input.js" charset="utf-8"></script>
+    <script src="static/bower_components/foundation-sites/dist/foundation.js" charset="utf-8"></script>
+    <script src="static/bower_components/jquery.scrollTo/jquery.scrollTo.js" charset="utf-8"></script>
+    <script src="static/js/app.js" charset="utf-8"></script>
+  </body>
+</html>

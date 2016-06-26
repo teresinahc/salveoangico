@@ -1,0 +1,14 @@
+{
+  "name": "salveoangico",
+  "description": "",
+  "authors": [
+    "Renato Alencar <renatoalencar.73@gmail.com>"
+  ],
+  "license": "MIT",
+  "homepage": "",
+  "dependencies": {
+    "foundation-sites": "^6.2.3",
+    "font-awesome": "^4.6.3",
+    "jquery.scrollTo": "^2.1.2"
+  }
+}

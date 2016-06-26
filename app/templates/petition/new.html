@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+{% macro render_field(field, placeholder=None) %}
+  {% if field.errors %}
+  <div>
+  {% elif field.flags.error %}
+  <div>
+  {% else %}
+  <div>
+  {% endif %}
+      {% set css_class = 'form-control ' + kwargs.pop('class', '') %}
+      {{ field(class=css_class, placeholder=placeholder, **kwargs) }}
+  </div>
+{% endmacro %}
+
+{% block body %}
+
+
+  <div class="row">
+    <div class="small-12 medium-12 large-10 large-push-1 column">
+      <h2 class="title">APOIE ESTA CAUSA</h2>
+
+      {% with messages = get_flashed_messages() %}
+        {% if messages %}
+          {% for message in messages %}
+            <div class="petition-message success">
+              {{ message }}
+            </div>
+          {% endfor %}
+        {% endif %}
+      {% endwith %}
+
+      {% if form.errors %}
+        <div class="form-errors-wrapper" >
+          <h5>Alguns erros foram encontrados: </h5>
+          {% for field, error in form.errors.items() %}
+            {% for e in error %}
+              <div class="petition-form-error">
+                {{ e }}
+              </div>
+            {% endfor %}
+          {% endfor %}
+        </div>
+      {% endif %}
+
+      <div class="row">
+        <form action="." method="POST" accept-charset="UTF-8" role="form" >
+
+          {{ form.csrf_token }}
+
+          <div class="small-12 column">
+            {{ render_field(form.name, placeholder="Nome completo*") }}
+            <!-- <input type="text" name="name" placeholder="Nome Completo*" required> -->
+          </div>
+          <div class="small-12 medium-6 large-6 column">
+            {{ render_field(form.email, placeholder="Endereço de email*") }}
+            <!-- <input type="email" name="name" placeholder="Email*" required> -->
+          </div>
+          <div class="small-12 medium-6 large-6 column">
+            {{ render_field(form.registration, placeholder="CPF*") }}
+            <!-- <input type="text" name="name" placeholder="CPF*" required> -->
+          </div>
+          <div class="small-12 column text-center">
+            <button type="submit" name="button" class="button success">
+              ASSINAR
+            </button>
+          </div>
+        </form>
+      </div>
+
+    </div>
+  </div>
+{% endblock %}

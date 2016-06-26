@@ -30,7 +30,7 @@ header nav .brand {
 #save-angico .mask {
   background-color: rgba(0, 0, 0, 0.7);
   height: 100%;
-  padding: 100px 0;
+  padding: 55px 0;
 }
 
 #save-angico h1 {
@@ -126,4 +126,9 @@ footer {
 
 .petition-message {
   color: green;
+  margin: 10px 0;
+}
+
+.tada-wrapper {
+  margin-top: 50px;
 }

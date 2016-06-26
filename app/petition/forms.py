@@ -14,7 +14,7 @@ def validate_registration(form, field):
     value = value.replace('-', '')
 
     if not cpfcnpj.validate(value):
-        raise ValidationError("O CPF não é válido.")
+        raise ValidationError(u"O CPF não é válido.")
 
 
 class SignatureForm(Form):
@@ -24,7 +24,7 @@ class SignatureForm(Form):
     )
     email = TextField(
         'Endereço de email',
-        [Email(), Required(message='Preencha com seu endereço de email'), Unique(Signature, Signature.email)]
+        [Email(), Required(message=u'Preencha com seu endereço de email'), Unique(Signature, Signature.email)]
     )
     registration = TextField(
         'CPF',

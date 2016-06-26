@@ -14,4 +14,4 @@ class Unique(object):
     def __call__(self, form, field):
         check = self.model.query.filter(self.field == field.data).first()
         if check:
-            raise ValidationError(field.label.text + ' já está cadastrado.')
+            raise ValidationError(field.label.text + u' já está cadastrado.')

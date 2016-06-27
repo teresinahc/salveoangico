@@ -21,6 +21,15 @@ header nav .brand {
   font-size: 20px;
 }
 
+header nav .menu {
+  background-color: black;
+  display: block;
+}
+
+header nav .menu li a {
+  color: white;
+}
+
 #save-angico {
   background-image: url('../img/angico-7.jpg');
   background-size: cover;

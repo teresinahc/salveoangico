@@ -159,3 +159,12 @@ footer a {
   overflow:hidden;
   margin-bottom: 15px;
 }
+
+#signed .pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+
+#signed .pagination a {
+  color: #FFF;
+}

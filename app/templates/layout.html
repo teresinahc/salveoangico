@@ -195,7 +195,7 @@
           <h2 class="title">PESSOAS QUE APOIAM ESTA IDÉIA</h2>
 
           <div class="small-12 medium-12 large-10 large-push-1 column">
-            {% for signature in signatures %}
+            {% for signature in signatures.items %}
               <div class="small-12 medium-6 large-6 column">
                 <div class="person">
                   {{ signature.name }}
@@ -205,6 +205,31 @@
           </div>
 
           <div class="column"></div>
+        </div>
+        <div class="row">
+          <div class="small-12 medium-12 large-10 large-push-1 column">
+            <ul class="pagination" role="menubar" aria-label="Pagination">
+              {% if signatures.has_prev %}
+                <li class="arrow" aria-disabled="true">
+                  <a href="{{ url_for('petitions.create', page=signatures.prev_num, _anchor='signed') }}">&laquo; Próxima</a>
+                </li>
+              {% else %}
+                <li class="arrow unavailable" aria-disabled="true">
+                  <a href="">&laquo; Próxima</a>
+                </li>
+              {% endif %}
+
+              {% if signatures.has_next %}
+                <li class="arrow" aria-disabled="true">
+                  <a href="{{ url_for('petitions.create', page=signatures.next_num, _anchor='signed') }}">Anterior &raquo;</a>
+                </li>
+              {% else %}
+                <li class="arrow unavailable" aria-disabled="true">
+                  <a href="">Anterior &raquo;</a>
+                </li>
+              {% endif %}
+            </ul>
+          </div>
         </div>
       </section>
 

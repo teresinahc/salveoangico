@@ -16,7 +16,7 @@ def create():
 
     form = SignatureForm(request.form)
     signatures_count = Signature.query.count()
-    signatures = Signature.query.all()
+    signatures = Signature.query.order_by('date_created DESC').all()
 
     if form.validate_on_submit():
         signature = Signature(

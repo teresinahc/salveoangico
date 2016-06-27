@@ -10,6 +10,7 @@ gulp.task('uglify-js', function () {
     'bower_components/jquery.scrollTo/scrollTo.min.js',
     'bower_components/what-input/what-input.min.js',
     'bower_components/foundation-sites/dist/foundation.min.js',
+    'static/bower_components/featherlight/src/featherlight.js',
     'js/lib/jquery.mask.js',
     'js/app.js'
   ])
@@ -21,6 +22,7 @@ gulp.task('minify-css', function () {
   return gulp.src([
     'bower_components/foundation-sites/dist/foundation.css',
     'bower_components/font-awesome/css/font-awesome.css',
+    'static/bower_components/featherlight/src/featherlight.css',
     'css/app.css'
   ])
   .pipe(cleanCss())

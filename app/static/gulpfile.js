@@ -10,6 +10,7 @@ gulp.task('uglify-js', function () {
     'bower_components/jquery.scrollTo/scrollTo.min.js',
     'bower_components/what-input/what-input.min.js',
     'bower_components/foundation-sites/dist/foundation.min.js',
+    'js/lib/jquery.mask.js',
     'js/app.js'
   ])
   .pipe(concat('app.min.js'))

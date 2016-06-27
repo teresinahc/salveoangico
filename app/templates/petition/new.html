@@ -16,6 +16,12 @@
 {% block body %}
 
 
+  {% if scroll %}
+    <script type="text/javascript">
+      window.location.hash = 'sign-form';
+    </script>
+  {% endif %}
+
   <div class="row">
     <div class="small-12 medium-12 large-10 large-push-1 column">
       <h2 class="title">APOIE ESTA CAUSA</h2>

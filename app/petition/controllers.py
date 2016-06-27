@@ -19,7 +19,6 @@ def create():
     signatures = Signature.query.all()
 
     if form.validate_on_submit():
-
         signature = Signature(
             name=form.name.data,
             email=form.email.data,
@@ -33,7 +32,7 @@ def create():
             flash('Assinatura realizada com sucesso!',
                   'success-message')
 
-            return redirect('/')
+            return redirect('/#sign-form')
 
         flash('Ocorreu um erro ao tentar salvar sua assinatura',
               'error-message')

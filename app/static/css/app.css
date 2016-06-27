@@ -109,6 +109,10 @@ footer {
   background-color: #111;
 }
 
+footer a {
+  color: white;
+}
+
 #signed .person {
   border-bottom: 1px solid #aaaaaa;
   color: white;

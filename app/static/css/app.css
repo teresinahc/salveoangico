@@ -154,11 +154,8 @@ footer a {
   margin-top: 50px;
 }
 
-#images {
-  margin-top: 20px;
-}
-
 .image-item {
   max-height: 202.5px;
   overflow:hidden;
+  margin-bottom: 15px;
 }

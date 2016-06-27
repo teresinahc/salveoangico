@@ -15,7 +15,7 @@ mod_petition = Blueprint('petitions', __name__)
 @mod_petition.route('/<int:page>', methods=['GET', 'POST'])
 def create(page=1):
     if request.environ['HTTP_HOST'] == 'www.salveoangico.com.br':
-        return redirect('https://salveoangico.com.br/%s' % request.path)
+        return redirect('https://salveoangico.com.br/%s' % request.path, 301)
 
     form = SignatureForm(request.form)
     signatures_count = Signature.query.count()

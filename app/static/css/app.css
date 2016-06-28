@@ -166,5 +166,10 @@ footer a {
 }
 
 #signed .pagination a {
-  color: #FFF;
+  color: #fff;
+}
+
+#signed .pagination a:focus,
+#signed .pagination a:hover {
+  color: #333;
 }

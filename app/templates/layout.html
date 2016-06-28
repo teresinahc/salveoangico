@@ -5,7 +5,7 @@
     <title>Salve o Angico - Mais Angico, Menos Concreto</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <meta property="og:url" content="www.salveoangico.com">
+    <meta property="og:url" content="salveoangico.com.br">
     <meta property="og:locale" content="pt_BR">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Salve o Angico - Mais Angico, Menos Concreto">
@@ -65,15 +65,15 @@
 
             <ul class="menu right">
               <li>
-                <a class="brand" href="/">SALVE O ANGICO</a>
+                <a class="brand" href="/" title="Ir para o inicio">SALVE O ANGICO</a>
               </li>
               <li>
-                <a href="https://www.facebook.com/Salveoangico">
+                <a href="https://www.facebook.com/Salveoangico" title="Ir para a página no facebook">
                   <i class="fa fa-facebook"></i>
                 </a>
               </li>
               <li>
-                <a href="https://github.com/teresinahc/savetheangico">
+                <a href="https://github.com/teresinahc/savetheangico" title="Ir para repositório desse projeto no github">
                   <i class="fa fa-github"></i>
                 </a>
               </li>
@@ -102,7 +102,8 @@
                         <a
                           class="fb-xfbml-parse-ignore"
                           target="_blank"
-                          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FSalveoangico&amp;src=sdkpreparse">
+                          href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.facebook.com%2FSalveoangico&amp;src=sdkpreparse"
+                          title="Compartilhar a página no facebook">
                             Compartilhar
                         </a>
                     </div>
@@ -110,7 +111,8 @@
                   <li style="padding-top: 6px;">
                     <a
                       class="twitter-share-button"
-                      href="https://twitter.com/intent/tweet?text=Salve%20o%20angico!">
+                      href="https://twitter.com/intent/tweet?text=Salve%20o%20angico!%20#salveoangico"
+                      title="Compartilhar no Twitter">
                         Tweet
                     </a>
                   </li>
@@ -140,7 +142,7 @@
 
               <div class="small-12 column text-center">
                 <br>
-                <a href="#sign-form" id="scroll-to-form" class="button">APOIAR CAUSA</a>
+                <a href="#sign-form" id="scroll-to-form" class="button" title="Ir para formulário">APOIAR CAUSA</a>
               </div>
             </div>
           </div>
@@ -193,7 +195,7 @@
 
       <section class="padded" id="signed">
         <div class="row">
-          <h2 class="title">PESSOAS QUE APOIAM ESTA IDÉIA</h2>
+          <h2 class="title">PESSOAS QUE APOIAM ESSA IDEIA</h2>
 
           <div class="small-12 medium-12 large-10 large-push-1 column">
             {% for signature in signatures.items %}
@@ -212,7 +214,7 @@
             <ul class="pagination" role="menubar" aria-label="Pagination">
               {% if signatures.has_prev %}
                 <li class="arrow" aria-disabled="true">
-                  <a href="{{ url_for('petitions.create', page=signatures.prev_num, _anchor='signed') }}">&laquo; Próxima</a>
+                  <a href="{{ url_for('petitions.create', page=signatures.prev_num, _anchor='signed') }}" title="Próxima pagina">&laquo; Próxima</a>
                 </li>
               {% else %}
                 <li class="arrow unavailable" aria-disabled="true">
@@ -222,7 +224,7 @@
 
               {% if signatures.has_next %}
                 <li class="arrow" aria-disabled="true">
-                  <a href="{{ url_for('petitions.create', page=signatures.next_num, _anchor='signed') }}">Anterior &raquo;</a>
+                  <a href="{{ url_for('petitions.create', page=signatures.next_num, _anchor='signed') }}" title="Página anterior">Anterior &raquo;</a>
                 </li>
               {% else %}
                 <li class="arrow unavailable" aria-disabled="true">

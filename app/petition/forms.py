@@ -1,12 +1,12 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
-from flask_wtf import Form, RecaptchaField
-from wtforms import TextField, PasswordField, ValidationError
+from flask_wtf import Form
+from wtforms import TextField, ValidationError
 from wtforms.validators import Required, Email
 from pycpfcnpj import cpfcnpj
-from app import db
 from models import Signature
 from utils.unique import Unique
+
 
 def validate_registration(form, field):
     # TODO: Improve string sanatization
@@ -24,9 +24,12 @@ class SignatureForm(Form):
     )
     email = TextField(
         'Endereço de email',
-        [Email(), Required(message=u'Preencha com seu endereço de email'), Unique(Signature, Signature.email)]
+        [Email(), Required(
+            message=u'Preencha com seu endereço de email'),
+            Unique(Signature, Signature.email)]
     )
     registration = TextField(
         'CPF',
-        [Required(message='Preencha com seu CPF'), validate_registration, Unique(Signature, Signature.registration)]
+        [Required(message='Preencha com seu CPF'), validate_registration,
+         Unique(Signature, Signature.registration)]
     )
